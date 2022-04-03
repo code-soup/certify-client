@@ -29,7 +29,7 @@ class CertifyClient {
      * 
      * @var string
      */
-    protected $prefix = '_certify_';
+    protected $prefix;
 
     
     /**
