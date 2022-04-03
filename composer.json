@@ -1,31 +1,31 @@
 {
-    "name": "code-soup/certify-client",
-    "description": "Client side class for verifying license issued by Certify plugin",
     "type": "library",
-    "license": "GPL-3.0-or-later",
-    "homepage": "https://github.com/code-soup/certify-client",
+    "description": "Client side class for verifying license issued by Certify plugin",
     "autoload": {
         "psr-4": {
             "CodeSoup\\CertifyClient\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "Vlado Bosnjak",
-            "email": "hi@codesoup.co",
-            "homepage": "https://www.codesoup.co",
-            "role": "Developer"
-        }
-    ],
-    "minimum-stability": "stable",
+    "license": "GPL-3.0-or-later",
+    "support": {
+        "url": "https://github.com/code-soup/certify-client/issues"
+    },
     "require": {
         "php": ">=7.2"
     },
-    "version": "1.0.0",
-    "keywords" : [
+    "minimum-stability": "dev",
+    "keywords": [
         "WordPress plugins license manager"
     ],
-    "support": {
-        "url": "https://github.com/code-soup/certify-client/issues"
-    }
+    "authors": [
+        {
+            "email": "hi@codesoup.co",
+            "role": "Developer",
+            "name": "Vlado Bosnjak",
+            "homepage": "https://www.codesoup.co"
+        }
+    ],
+    "homepage": "https://github.com/code-soup/certify-client",
+    "version": "1.0.0",
+    "name": "code-soup/certify-client"
 }
