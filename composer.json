@@ -18,7 +18,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "php": ">=7.2"
+    },
     "version": "1.0.0",
     "keywords" : [
         "WordPress plugins license manager"
