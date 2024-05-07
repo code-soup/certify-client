@@ -2,7 +2,7 @@
 	"name": "codesoup/certify-client",
 	"description": "Certify Client streamlines license key verification in WordPress plugins, enabling developers to effortlessly authenticate licenses issued by their Certify Server. Simplify license management and protect your plugin's integrity with ease.",
 	"homepage": "https://github.com/code-soup/certify-client",
-	"type": "composer-package",
+	"type": "library",
 	"license": "GPL-3.0",
 	"support": {
 		"issues": "https://github.com/code-soup/certify-client/issues"
@@ -22,6 +22,7 @@
 	"keywords": [
 		"certify",
 		"wordpress",
+		"license manager",
 		"certify client",
 		"wordpress plugin license manager"
 	],
@@ -32,10 +33,5 @@
 	},
 	"require": {
 		"php": ">=8.2.0"
-	},
-	"config": {
-		"allow-plugins": {
-			"composer/installers": true
-		}
 	}
 }
