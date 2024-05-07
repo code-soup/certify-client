@@ -1,53 +1,40 @@
-## WordPress Plugin Boilerplate
+## Certify Client
 
-Updated verision of [WordPress Plugin Boilerplate](https://github.com/DevinVinson/WordPress-Plugin-Boilerplate).
-Includes a Webpack build script and webpack-dev-server for local development.
-Integrates PHP namespacing and PSR-4 autoloader for better experience.
+A license management and verification solution for commercial WordPress plugins.
 
-## Setup
+## Description
 
-Follow [Setup instructions here](https://github.com/code-soup/wordpress-plugin-boilerplate/wiki/04.-Installation)
+The Certify Client is a composer package that provides a license activation and verification solution for custom WordPress plugins.
+In order to use Certify Client, you must have the Certify Server installed on your server.
 
-## Issues
-
-Please use [Github issues](https://github.com/code-soup/wordpress-plugin-boilerplate/issues) to submit any bugs you may find.
-
-## Documentation
-
-Plugin documentation with instalation instruction and best practices can be found at [wiki page](https://github.com/code-soup/wordpress-plugin-boilerplate/wiki).
+Certify Server is a free WordPress plugin which enables you to manage licenses for your custom WordPress plugins and provides custom update repository to handle plugin updates.
 
 ## Features
 
--   Sass for stylesheets
--   Stylelint
--   ES6 with Babel for JavaScript
--   ESLint
--   [Webpack 5](https://webpack.github.io) build script for frontend and wp-admin assets
--   [Webpack dev server](https://github.com/webpack/webpack-dev-server) with live reloading and HMR
--   PSR-4 Autoloader
--   [SVG Spritemap by cascornelissen](https://github.com/cascornelissen/svg-spritemap-webpack-plugin)
+-   Verify license keys issued by the Certify Server
+-   Integrate license verification into your plugin with ease, using our simple and intuitive API
+-   Limit number of activations per license
+-   Generate license for multiple plugins
+-   Integrated with [Paddle.com](https://www.paddle.com)
 
 ## Requirements
 
-Make sure all dependencies have been installed before moving on:
+-   PHP >= 8.2
+-   Composer
+-   Certify Server installed on your server
 
--   [WordPress](https://wordpress.org/) >= 5.0
--   [PHP](http://php.net/manual/en/install.php) >= 8.1
--   [Composer](https://getcomposer.org/download/)
--   [Node.js](http://nodejs.org/) >= 20
--   [Yarn](https://yarnpkg.com/en/docs/install)
+## Setup
 
-## Coding Standards
+Follow the setup instructions in our [wiki page](https://github.com/your-username/certify-client/wiki) to get started with Certify Client.
 
--   `wpcs` : analyze code against the WordPress coding standards with PHP_CodeSniffer.
--   `cbf` : fix coding standards warnings/errors automatically with PHP Code Beautifier.
--   `lint` : lint PHP files against parse errors.
+## Issues
 
-To check a file against the WordPress coding standards or to automatically fix coding standards, simply specify the file's location:
+Please use [Github issues](https://github.com/your-username/certify-client/issues) to submit any bugs you may find.
 
--   `wpcs includes/class-init.php`
--   `cbf includes/class-init.php`
+## Documentation
 
-#### License
+Plugin documentation, including installation instructions and best practices, can be found at our [wiki page](https://github.com/your-username/certify-client/wiki).
+
+## License
 
 This project is licensed under the [GPL license](http://www.gnu.org/licenses/gpl-3.0.txt).
