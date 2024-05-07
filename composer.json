@@ -1,11 +1,11 @@
 {
-	"name": "codesoup/wppb",
-	"description": "WordPress Plugin Boilerplate",
-	"homepage": "https://github.com/code-soup/wordpress-plugin-boilerplate",
-	"type": "wordpress-plugin",
+	"name": "codesoup/certify-client",
+	"description": "Certify Client streamlines license key verification in WordPress plugins, enabling developers to effortlessly authenticate licenses issued by their Certify Server. Simplify license management and protect your plugin's integrity with ease.",
+	"homepage": "https://github.com/code-soup/certify-client",
+	"type": "composer-package",
 	"license": "GPL-3.0",
 	"support": {
-		"issues": "https://github.com/code-soup/wordpress-plugin-boilerplate/issues"
+		"issues": "https://github.com/code-soup/certify-client/issues"
 	},
 	"authors": [
 		{
@@ -20,10 +20,10 @@
 		}
 	],
 	"keywords": [
-		"wppb",
+		"certify",
 		"wordpress",
-		"wordpress plugin",
-		"wordpress plugin boilerplate"
+		"certify client",
+		"wordpress plugin license manager"
 	],
 	"autoload": {
 		"classmap": [
@@ -31,38 +31,11 @@
 		]
 	},
 	"require": {
-		"php": ">=7.4.0",
-		"composer/installers": "^2.2.0",
-		"vlucas/phpdotenv": "^5.5"
-	},
-	"require-dev": {
-		"wp-coding-standards/wpcs": "*",
-		"phpcompatibility/phpcompatibility-wp": "*",
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-		"php-parallel-lint/php-parallel-lint": "^1.3.1",
-		"php-parallel-lint/php-console-highlighter": "^0.5.0"
+		"php": ">=8.2.0"
 	},
 	"config": {
 		"allow-plugins": {
-			"dealerdirect/phpcodesniffer-composer-installer": true,
 			"composer/installers": true
-		}
-	},
-	"scripts": {
-		"wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --report=full",
-		"cbf": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf --report=full",
-		"lint": "@php ./vendor/bin/parallel-lint . -e php --show-deprecated --exclude vendor --exclude .git"
-	},
-	"extra": {
-		"installer-paths": {
-			"vendor/{$name}": [
-				"vendor/package"
-			]
-		},
-		"scripts-description": {
-			"wpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
-			"cbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier",
-			"lint": "Lint PHP files against parse errors"
 		}
 	}
 }

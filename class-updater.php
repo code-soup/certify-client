@@ -1,28 +1,8 @@
 <?php
 
-namespace CodeSoup\CertifyClient\Admin;
+namespace CodeSoup\CertifyClient;
 
-// Exit if accessed directly
-defined( 'WPINC' ) || die;
-
-
-/**
- * @file
- * The admin-specific functionality of the plugin.
- *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the admin-specific stylesheet and JavaScript.
- */
 class Updater {
-
-	use \CodeSoup\CertifyClient\Traits\HelpersTrait;
-
-	// Main plugin instance.
-	protected static $instance = null;
-
-	
-	// Assets loader class.
-	protected $assets;
 
 	public $plugin_slug;
 	public $plugin_path;
@@ -31,39 +11,36 @@ class Updater {
 	public $cache_allowed;
 	public $certify_server_url;
 
-
-
 	/**
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
 	 */
-	public function __construct() {
+	public function __construct( $args = []) {
 
-		// Main plugin instance.
-		$instance     = \CodeSoup\CertifyClient\plugin_instance();
-		$hooker       = $instance->get_hooker();
-		$this->assets = $instance->get_assets();
+		$params = wp_parse_args( $args, array(
+			'plugin_slug'        => '',
+			'plugin_path'        => '',
+			'version'            => '',
+			'cache_key'          => '',
+			'cache_allowed'      => false,
+			'certify_server_url' => '',
+		));
 
-		$this->plugin_slug        = $this->get_plugin_id();
-		$this->plugin_path        = $this->get_plugin_id('/index.php');
-		$this->version            = '1.0';
-		$this->cache_key          = 'certify_client_update';
-		$this->cache_allowed      = false;
-		$this->certify_server_url = 'http://cs.zz/certify';
+		$this->plugin_slug        = $params['plugin_slug'];
+		$this->plugin_path        = $params['plugin_slug'];
+		$this->version            = $params['plugin_version'];
+		$this->cache_key          = $params['cache_key'];
+		$this->cache_allowed      = $params['cache_allowed'];
+		$this->certify_server_url = $params['certify_server_url'];
 
-		$hooker->add_filters([
-			['plugins_api', $this, 'fetch_plugin_info', 20, 3],
-			['site_transient_update_plugins', $this],
-		]);
+		add_filter('site_transient_update_plugins', [$this, 'site_transient_update_plugins'] );
+		add_filter('plugins_api', [$this, 'fetch_plugin_info'], 20, 3 );
 
 		// Admin hooks.
-		$hooker->add_actions([
-			['upgrader_process_complete', $this, '', 10, 2]
-		]);
+		add_action('upgrader_process_complete', [$this, 'upgrader_process_complete'], 10, 2);
 
 		$this->request();
-		$this->log('tu');
 	}
 
 
@@ -112,8 +89,6 @@ class Updater {
 				),
 			)
 		);
-
-		$this->log( $this->get_update_url() );
 
 		$remote = json_decode( wp_remote_retrieve_body( $remote ) );
 
