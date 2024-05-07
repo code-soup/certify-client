@@ -1,6 +1,6 @@
 <?php
 
-namespace WPTester;
+namespace CodeSoup\CertifyClient;
 
 // Exit if accessed directly
 defined( 'WPINC' ) || die;

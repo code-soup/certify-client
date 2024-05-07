@@ -11,7 +11,7 @@ defined('WPINC') || die;
  * Requires PHP: 8.2
  * Author: Code Soup
  * Author URI: https://www.codesoup.co
- * License: certify-client
+ * License: GPLv3
  * Text Domain: certify-client
  */
 

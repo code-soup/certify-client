@@ -78,6 +78,18 @@ trait HelpersTrait {
 
 
     /**
+     * Returns Plugin Slug, which is plugin folder name
+     * Converts to-slug-like-id
+     *
+     * @return string
+     */
+    private function get_plugin_slug(): string {
+
+        return str_replace( '_', '-', $this->get_plugin_dir_url() );
+    }
+
+
+    /**
      * Get plugin contstant by name
      *
      * @param  string $name [description]

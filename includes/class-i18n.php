@@ -20,10 +20,10 @@ class I18n {
 	public function __construct() {
 		
 		// Main plugin instance
-		// $instance = cc();
-		// $hooker   = $instance->get_hooker();
+		$instance = \CodeSoup\CertifyClient\plugin_instance();
+		$hooker   = $instance->get_hooker();
 
-		// $hooker->add_action('init', $this, 'load_textdomain');
+		$hooker->add_action('init', $this, 'load_textdomain');
 	}
 
 
@@ -39,7 +39,7 @@ class I18n {
 	public function load_textdomain() {
 
 		load_plugin_textdomain(
-			'cc',
+			'certify-client',
 			false,
 			'/languages'
 		);

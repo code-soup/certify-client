@@ -38,7 +38,11 @@ class Init {
 		$this->assets = $instance->get_assets();
 
 		// Admin hooks.
-		$hooker->add_action( 'admin_enqueue_scripts', $this );
+		// $hooker->add_action( 'admin_enqueue_scripts', $this );
+
+		// Options Page
+		new \CodeSoup\CertifyClient\Admin\PageLicense;
+		new \CodeSoup\CertifyClient\Admin\Updater;
 	}
 
 	/**
