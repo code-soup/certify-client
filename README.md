@@ -70,10 +70,13 @@ Response:
 
 ```json
 {
-	"valid": true, // Days left to expire > 0 && limit activations not reached
-	"expiry": 1748995200 // Timestamp when key is about to expire
+	"valid": true,
+	"expiry": 1748995200
 }
 ```
+
+-   `valid`: Days left to expire > 0 AND activations limit is not yet reached. This would also mean that user is allowed to install plugin update.
+-   `expiry`: Timestamp when key is about to expire
 
 In case of any error following is returned:
 
