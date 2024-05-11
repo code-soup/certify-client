@@ -23,6 +23,7 @@ Thumbs.db
 ._*
 .Spotlight-V100
 .Trashes
+.editorconfig
 nbproject
 *.sublime-project
 *.sublime-workspace
