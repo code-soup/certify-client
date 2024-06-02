@@ -15,13 +15,13 @@ Certify Server is a free WordPress plugin which enables you to manage licenses f
 -   Integrate license verification into your plugin with ease, using our simple and intuitive API
 -   Limit number of activations per license
 -   Generate license for multiple plugins
--   Integrated with [Paddle.com](https://www.paddle.com)
+-   Integrated with [Paddle.com](https://www.paddle.com) subscriptions
 
 ## Requirements
 
 -   PHP >= 8.2
 -   Composer
--   Certify Server installed on your server
+-   [Certify Server](https://github.com/code-soup/certify) installed on your server
 
 ## Setup
 
@@ -89,7 +89,7 @@ In case of any error following is returned:
 
 ## Issues
 
-Please use [Github issues](https://github.com/your-username/certify-client/issues) to submit any bugs you may find.
+Please use [Github issues](https://github.com/code-soup/certify-client/issues) to submit any bugs you may find.
 
 ## License
 
